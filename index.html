@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Presentación pública de IA Brains de Chatty, un atlas local de conocimiento documentado con consulta mediante IA local.">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="IA Brains de Chatty">
+  <meta property="og:description" content="Atlas local de conocimiento documentado con consulta mediante IA local.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/atlas-cover-concept.png">
+  <title>IA Brains de Chatty · Presentación</title>
+  <style>
+    :root{font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#f6f3ff;background:#0b0d16}
+    *{box-sizing:border-box}body{margin:0}.slide{display:none;min-height:100vh;padding:clamp(34px,5vw,85px);position:relative;overflow:hidden}
+    .slide.active{display:flex;flex-direction:column;justify-content:center}.slide::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 85% 20%,rgba(151,125,231,.13),transparent 38%);pointer-events:none}
+    .cover{background:linear-gradient(90deg,#090a12 0%,rgba(9,10,18,.95) 23%,rgba(9,10,18,.3) 67%),url("assets/atlas-cover-concept.png") center/cover}
+    .photo{background:linear-gradient(90deg,#0b0d16 0%,rgba(11,13,22,.94) 29%,rgba(11,13,22,.42) 72%),url("assets/local-ai-concept.png") center/cover}
+    .kicker{font-size:clamp(13px,1.2vw,18px);font-weight:750;letter-spacing:.2em;text-transform:uppercase;color:#e6bf82;margin:0 0 25px}
+    h1{font-size:clamp(52px,7vw,110px);line-height:.99;letter-spacing:-.065em;max-width:850px;margin:0 0 26px}h2{font-size:clamp(42px,5vw,74px);line-height:1.04;letter-spacing:-.055em;max-width:1040px;margin:0 0 28px}
+    p{font-size:clamp(20px,2vw,30px);line-height:1.4;color:#c3c3d6;max-width:950px;margin:0 0 20px}.lead{font-size:clamp(24px,2.8vw,41px);color:#f4f1ff;max-width:980px}
+    .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(25px,4vw,75px);max-width:1200px;margin-top:25px}.grid h3{font-size:clamp(23px,2.3vw,34px);color:#e6bf82;margin:0 0 12px}.grid p{font-size:clamp(19px,1.65vw,25px)}
+    .line{height:1px;background:#665e80;max-width:1100px;margin:20px 0 35px}.foot{position:absolute;left:clamp(34px,5vw,85px);bottom:30px;font-size:14px;color:#a7a7bc}.counter{position:fixed;right:35px;bottom:31px;z-index:5;color:#c4bdd5;font-size:14px}.controls{position:fixed;right:35px;top:30px;z-index:5;display:flex;gap:8px}.controls button{font:inherit;border:1px solid #77718a;background:#171b29;color:#f5f2ff;border-radius:8px;padding:7px 14px;cursor:pointer}.controls button:focus-visible{outline:2px solid #e6bf82}
+    .small{font-size:16px;color:#a7a7bc}.accent{color:#cbb8ff}.plain{background:linear-gradient(145deg,#111521,#0a0c15)}
+    .hierarchy{width:min(1160px,100%);text-align:center}.hier-node{display:inline-block;padding:11px 20px;border-top:2px solid #ad94f0}.hier-node strong{display:block;font-size:clamp(20px,2vw,29px)}.hier-node span{display:block;margin-top:4px;color:#aaa9bb;font-size:clamp(14px,1.3vw,19px)}.hier-node.owner{border-color:#e6bf82}.hier-node.orchestrator{border-color:#b9a7f0}.stem{height:24px;width:1px;background:#6f6882;margin:auto}.branches{display:grid;grid-template-columns:1fr 1.6fr 1.2fr 1fr;gap:22px;border-top:1px solid #5f596e;padding-top:22px}.branch h3{font-size:clamp(16px,1.5vw,21px);letter-spacing:.08em;text-transform:uppercase;color:#e6bf82;margin:0 0 14px}.branch .hier-node{display:block;padding:10px 5px;margin:0 0 12px}.branch.web{border-top:2px solid #ad94f0;padding-top:16px}.siblings{display:grid;grid-template-columns:1fr 1fr;gap:12px}.review-note{font-size:14px;color:#9997a9;margin:5px auto 0;max-width:720px}
+    @media(max-width:760px){.grid{grid-template-columns:1fr}.branches{gap:8px}.siblings{grid-template-columns:1fr}.hierarchy{margin-top:0}.hierarchy+.foot{display:none}.hier-node{padding:7px 4px}.branch.web{padding-top:7px}.branch h3{font-size:10px;margin-bottom:7px}.hier-node strong{font-size:14px}.hier-node span{font-size:9px}.review-note{font-size:10px}.stem{height:13px}.slide{padding-bottom:70px}.cover,.photo{background-position:60% center}.foot{bottom:22px;max-width:75%}}
+    @media print{.slide,.slide.active{display:flex;min-height:100vh;break-after:page}.controls,.counter{display:none}}
+  </style>
+</head>
+<body>
+  <main>
+    <section class="slide cover active" aria-label="Diapositiva 1">
+      <p class="kicker">Proyecto de Mikel Lirastorza</p>
+      <h1>IA Brains<br>de Chatty</h1>
+      <p class="lead">Un atlas para recorrer conocimiento documentado y preguntarle a una IA local.</p>
+      <p class="foot">Imagen conceptual generada. No representa una captura del producto.</p>
+    </section>
+    <section class="slide plain" aria-label="Diapositiva 2">
+      <p class="kicker">El problema</p>
+      <h2>Encontrar una función no debería exigir recordar dónde se guardó</h2>
+      <p>Proyectos, documentación y capacidades viven en lugares distintos. El atlas los reúne como fichas con origen y estado, para que cada afirmación pueda revisarse.</p>
+      <div class="line"></div>
+      <p class="small">El inventario de proyectos indica que existen carpetas locales. No atribuye a Chatty trabajo sobre su contenido.</p>
+    </section>
+    <section class="slide plain" aria-label="Diapositiva 3">
+      <p class="kicker">El producto</p>
+      <h2>Mapa, búsqueda y conversación en la misma vista</h2>
+      <div class="grid">
+        <div><h3>Exploración</h3><p>El mapa conecta fichas de capacidades, funciones, temas y proyectos. La búsqueda y los filtros ayudan a llegar a una fuente concreta.</p></div>
+        <div><h3>Pregunta al atlas</h3><p>Una interfaz nueva consulta un modelo Ollama instalado en este Mac. La respuesta usa fichas documentadas y muestra cuáles se consultaron.</p></div>
+      </div>
+      <p class="foot">La conversación local no equivale a la sesión de ChatGPT ni importa recuerdos privados.</p>
+    </section>
+    <section class="slide photo" aria-label="Diapositiva 4">
+      <p class="kicker">Arquitectura verificable</p>
+      <h2>Datos acotados y motor local</h2>
+      <p>Python genera la vista y un índice SQLite FTS5 separado. C calcula métricas de red. Haskell propone el trazado inicial. El navegador presenta el mapa y el servidor local conecta las preguntas con Ollama.</p>
+      <p class="foot">Fotografía conceptual generada. No es una captura del código o del producto.</p>
+    </section>
+    <section class="slide plain" aria-label="Diapositiva 5">
+      <p class="kicker">Equipo de construcción web</p>
+      <h2>Jerarquía de agentes</h2>
+      <div class="hierarchy" role="img" aria-label="Mikel dirige. Chatty coordina. Hiram define producto. Aholiab y Miguelin construyen el frontend al mismo nivel. Daniel cubre backend. Josué cubre datos y Supabase. Natán revisa de forma independiente.">
+        <div class="hier-node owner"><strong>Mikel</strong><span>Owner y decisión final</span></div>
+        <div class="stem"></div>
+        <div class="hier-node orchestrator"><strong>Chatty</strong><span>Orquestación e integración</span></div>
+        <div class="stem"></div>
+        <div class="branches">
+          <div class="branch"><h3>Producto</h3><div class="hier-node"><strong>Hiram</strong><span>Producto y experiencia</span></div></div>
+          <div class="branch web"><h3>Frontend, mismo nivel</h3><div class="siblings"><div class="hier-node"><strong>Aholiab</strong><span>UI, React y accesibilidad</span></div><div class="hier-node"><strong>Miguelin</strong><span>Sistema visual y CSS</span></div></div></div>
+          <div class="branch"><h3>Plataforma</h3><div class="hier-node"><strong>Daniel</strong><span>Backend y servidor</span></div><div class="hier-node"><strong>Josué</strong><span>Datos y Supabase</span></div></div>
+          <div class="branch"><h3>Control</h3><div class="hier-node"><strong>Natán</strong><span>QA y revisión crítica</span></div></div>
+        </div>
+        <p class="review-note">Un único agente escribe cada archivo durante una fase. Natán revisa sin sustituir al implementador.</p>
+      </div>
+    </section>
+    <section class="slide plain" aria-label="Diapositiva 6">
+      <p class="kicker">Límites de confianza</p>
+      <h2>La procedencia forma parte de la experiencia</h2>
+      <div class="grid">
+        <div><h3>Qué hace hoy</h3><p>Consulta fichas del catálogo. Comprueba rutas de origen. Mantiene un índice propio. Responde desde el modelo local cuando Ollama está disponible.</p></div>
+        <div><h3>Qué sigue pendiente</h3><p>La memoria privada canónica no se importa. La copia para SSD conserva el mapa, sin IA ni acceso automático a rutas del Mac.</p></div>
+      </div>
+    </section>
+    <section class="slide plain" aria-label="Diapositiva 7">
+      <p class="kicker">Estado del proyecto</p>
+      <h2>Prototipo local comprobado</h2>
+      <p class="lead">La vista se abrió en navegador y una pregunta recibió respuesta de Ollama local. Pasaron 8 pruebas de Python y 4 de interfaz Node.</p>
+      <p>Esta publicación presenta el proyecto sin incluir el código, los datos locales, los prompts de agentes ni la memoria privada.</p>
+      <p class="foot">IA Brains de Chatty · Presentación pública</p>
+    </section>
+  </main>
+  <div class="controls"><button id="previous" type="button" aria-label="Diapositiva anterior">←</button><button id="next" type="button" aria-label="Diapositiva siguiente">→</button></div>
+  <div class="counter" id="counter" aria-live="polite"></div>
+  <script>
+    const slides=[...document.querySelectorAll('.slide')];let current=0;
+    function show(index){current=Math.max(0,Math.min(slides.length-1,index));slides.forEach((slide,i)=>slide.classList.toggle('active',i===current));document.getElementById('counter').textContent=`${current+1} / ${slides.length}`}
+    document.getElementById('previous').addEventListener('click',()=>show(current-1));document.getElementById('next').addEventListener('click',()=>show(current+1));
+    document.addEventListener('keydown',event=>{if(event.key==='ArrowRight'||event.key==='PageDown')show(current+1);if(event.key==='ArrowLeft'||event.key==='PageUp')show(current-1)});show(0);
+  </script>
+</body>
+</html>
